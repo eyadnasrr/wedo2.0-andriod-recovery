@@ -80,7 +80,7 @@ Find:
 
  use this link to access the download page:
  
-https://github.com/eyadnasrr/wedo2.0-android-recovery/releases/latest
+ https://github.com/eyadnasrr/wedo2.0-andriod-recovery/releases/tag/v1.0
 
 On the Release page, scroll to **Assets** and download:
 
