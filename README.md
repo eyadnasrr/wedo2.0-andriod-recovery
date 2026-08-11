@@ -78,13 +78,15 @@ Find:
 
 # ⬇️ Download WeDo 2.0
 
-**[👉 CLICK HERE TO OPEN THE DOWNLOAD PAGE](https://github.com/eyadnasrr/wedo2.0-android-recovery/releases/latest)**
+ use this link to access the download page:
+ 
+https://github.com/eyadnasrr/wedo2.0-android-recovery/releases/latest
 
 On the Release page, scroll to **Assets** and download:
 
 `WeDo.2.0v1.10.259.apks`
 
-Copy your original WeDo 2.0 `.apks` backup file from the computer into:
+Copy the downloaded WeDo 2.0 `.apks` backup file from the computer into:
 
 `Internal shared storage/ApkExtract/`
 
