@@ -1,183 +1,134 @@
 # LEGO Education WeDo 2.0 – Android Recovery Guide
 
-LEGO Education WeDo 2.0 is discontinued and may no longer be available for installation from the Google Play Store.
+LEGO Education WeDo 2.0 has been discontinued and may no longer be available for installation from the Google Play Store.
 
-Many schools, teachers and families still have perfectly working WeDo 2.0 SmartHubs and kits, but after replacing or factory-resetting an Android tablet they may no longer be able to reinstall the original WeDo 2.0 application.
+Many schools, teachers, parents and students still have fully working WeDo 2.0 SmartHubs and LEGO kits, but after resetting or replacing an Android tablet they may no longer be able to reinstall the original WeDo 2.0 application.
 
-This guide documents a method that was successfully tested on a factory-reset Android tablet.
+This guide provides a simple installation method that has been successfully tested on a factory-reset Android tablet.
 
 ---
 
-# What You Need
+# ✅ What You Need
+
+Only:
 
 - An Android tablet
-- A Windows laptop or computer
-- A backed-up WeDo 2.0 `.apks` file
-- An APK extractor
-- An installer capable of installing `.apks` packages, such as APK Installer by Braveheart
-- A USB cable
+- Internet connection
+- APK Installer by Braveheart
+- The WeDo 2.0 `.apks` file
 
-> IMPORTANT: Keep the WeDo 2.0 `.apks` backup exactly as it was created.  
-> Do NOT rename it, convert it, unzip it or modify its contents.
+No computer, USB cable, APK extractor, or manual file transfer is required.
 
 ---
 
-# Installation Instructions
+#  Installation
 
-## Step 1 – Install an APK Extractor
+## Step 1 – Install APK Installer
 
-On the Android tablet, install an APK extractor.
+Install **APK Installer by Braveheart** from Google Play:
 
-You can first install any small free Android application from Google Play to use as a test.
+https://play.google.com/store/apps/details?id=braveheart.apps.apkinstaller
 
-Open the APK extractor and extract that small application.
-
-This causes the extractor to create its storage folder on the tablet.
-
-On the tablet used for this test, the folder created was:
-
-`ApkExtract`
-
-You do NOT need the extracted test application afterward. Its purpose is simply to make sure the extractor has created and initialized its folder.
+This application can install `.apks` packages such as the WeDo 2.0 backup.
 
 ---
 
-## Step 2 – Install an APKS-Compatible Installer
+## Step 2 – Download WeDo 2.0
 
-Install:
+Download the tested WeDo 2.0 Android package directly:
 
-**APK Installer by Braveheart**
+https://github.com/eyadnasrr/wedo2.0-andriod-recovery/releases/download/v1.0/WeDo.2.0v1.10.259.apks
 
-or another Android installer that specifically supports `.apks` split-package files.
+The file should automatically be saved in your tablet's **Downloads** folder.
 
-A normal APK installer may not work because WeDo 2.0 can be stored as an `.apks` package containing multiple application components.
+### ⚠️ IMPORTANT
 
----
-
-## Step 3 – Connect the Tablet to the Computer
-
-Connect the Android tablet to the Windows computer using USB.
-
-On the tablet select:
-
-**File Transfer**
-
-Then open the tablet from Windows File Explorer.
-
-Go to:
-
-`Internal shared storage`
-
-Find:
-
-`ApkExtract`
-
----
-
-## Step 4 – Copy the WeDo 2.0 Backup
-
-# ⬇️ Download WeDo 2.0
-
- use this link to access the download page:
- 
- https://github.com/eyadnasrr/wedo2.0-andriod-recovery/releases/tag/v1.0
-
-On the Release page, scroll to **Assets** and download:
-
-`WeDo.2.0v1.10.259.apks`
-
-Copy the downloaded WeDo 2.0 `.apks` backup file from the computer into:
-
-`Internal shared storage/ApkExtract/`
-
-### VERY IMPORTANT
-
-Do not:
+Do NOT:
 
 - Rename the `.apks` file
 - Change `.apks` to `.apk`
-- Extract or unzip the file
-- Modify anything inside the package
+- Unzip or extract the file
+- Modify the file
 
-Copy the original file exactly as it was backed up.
-
----
-
-## Step 5 – Install WeDo 2.0
-
-Disconnect the tablet from the computer.
-
-Open **APK Installer by Braveheart**.
-
-Allow storage/file access if Android asks for permission.
-
-Let the installer scan the tablet.
-
-It should detect the WeDo 2.0 `.apks` package inside the `ApkExtract` folder.
-
-Select the WeDo package and press:
-
-**Install**
-
-Android may ask you to allow installation of unknown applications from APK Installer.
-
-Allow it.
-
-Continue the installation.
-
-Once installation finishes, LEGO Education WeDo 2.0 should appear in the tablet's application list.
+Leave the downloaded file exactly as it is.
 
 ---
 
-# Bluetooth / SmartHub Fix
+# 📲 Install WeDo 2.0
 
-After installation, WeDo 2.0 may open correctly but fail to find the WeDo 2.0 SmartHub.
+After the download is complete:
 
-This happened during our test.
+1. Open **APK Installer by Braveheart**.
+2. Allow file/storage access if Android requests permission.
+3. The installer should detect:
 
-The application itself was working. The problem was Android permissions.
+   `WeDo.2.0v1.10.259.apks`
+
+   inside the **Downloads** folder.
+
+4. Select the WeDo 2.0 file.
+5. Press **Install**.
+6. If Android asks you to allow installation from this source, allow it.
+7. Continue the installation.
+
+When installation finishes, **LEGO Education WeDo 2.0** should appear in your application list.
+
+---
+
+# 🔵 Bluetooth / SmartHub Connection
+
+After installation, WeDo 2.0 may open normally but initially fail to detect the WeDo 2.0 SmartHub.
+
+If this happens:
 
 Go to:
 
 **Settings → Apps → WeDo 2.0 → Permissions**
 
-Enable the permissions available on your Android version, especially:
+Allow the permissions available on your Android version, especially:
 
-- Location
-- Nearby devices
+- **Nearby devices**
+- **Location**
 
 Then:
 
 1. Turn Bluetooth ON.
-2. Turn Location/GPS ON.
+2. Turn Location ON.
 3. Close WeDo 2.0 completely.
 4. Open WeDo 2.0 again.
 5. Open a project.
-6. Select the SmartHub connection option.
+6. Press the SmartHub connection button inside WeDo.
 7. Press the green button on the WeDo 2.0 SmartHub.
 
-The SmartHub should now be detected.
+The SmartHub should now connect.
 
-This procedure was successfully tested and Bluetooth communication with the WeDo 2.0 SmartHub was restored.
+---
 
+# ✅ Successfully Tested
 
+This method was tested successfully with the following results:
 
-# Tested Result
+✅ WeDo 2.0 downloaded directly to the Android tablet
 
+✅ No APK Extractor required
 
-✅ WeDo 2.0 successfully reinstalled
+✅ No computer or USB transfer required
+
+✅ `.apks` file detected directly from Downloads
+
+✅ WeDo 2.0 installed successfully
 
 ✅ Application launched normally
 
 ✅ Bluetooth permissions restored
 
-✅ WeDo 2.0 SmartHub successfully connected
+✅ WeDo 2.0 SmartHub connected successfully
 
 ---
 
 # Important Notice
 
-This repository documents a recovery procedure for owners of existing LEGO Education WeDo 2.0 equipment and software backups.
+This repository documents an independently tested method for installing LEGO Education WeDo 2.0 on compatible Android devices.
 
 LEGO, LEGO Education and WeDo are trademarks of the LEGO Group.
 
