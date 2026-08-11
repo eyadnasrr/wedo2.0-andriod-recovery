@@ -4,110 +4,364 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#0f172a">
+
   <title>LEGO WeDo 2.0 Android Setup</title>
-  <meta name="description" content="Simple two-step LEGO Education WeDo 2.0 Android installation page.">
+
+  <meta
+    name="description"
+    content="Simple two-step LEGO Education WeDo 2.0 Android installation page."
+  >
+
   <style>
-    :root{
-      --bg:#f4f7fb; --card:#ffffff; --text:#0f172a; --muted:#5b6472;
-      --blue:#1667d9; --green:#168a50; --line:#dfe5ed;
-      --soft:#eef4ff; --warn:#fff7d6; --warn-border:#e2b900; --ok:#eaf8f0;
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #5b6472;
+      --blue: #1667d9;
+      --green: #168a50;
+      --line: #dfe5ed;
+      --soft: #eef4ff;
+      --warn: #fff7d6;
+      --warn-border: #e2b900;
+      --ok: #eaf8f0;
     }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.5;-webkit-text-size-adjust:100%}
-    .wrap{width:min(760px,100%);margin:0 auto;padding:22px 16px 48px}
-    .hero{text-align:center;padding:18px 4px 8px}
-    .badge{display:inline-block;background:#e8eef8;border-radius:999px;padding:7px 12px;font-size:13px;font-weight:700;color:#334155;margin-bottom:10px}
-    h1{font-size:clamp(29px,7vw,42px);line-height:1.08;margin:0 0 12px;letter-spacing:-.02em}
-    .subtitle{margin:0 auto;max-width:640px;color:var(--muted);font-size:18px}
-    .card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;margin:18px 0;box-shadow:0 8px 28px rgba(15,23,42,.06)}
-    .step{font-size:13px;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
-    h2{font-size:24px;line-height:1.2;margin:0 0 8px}
-    p{margin:8px 0}
-    .btn{display:block;width:100%;border:0;border-radius:14px;padding:18px 16px;margin-top:16px;text-align:center;text-decoration:none;color:white;font-weight:800;font-size:20px;line-height:1.15;cursor:pointer;-webkit-tap-highlight-color:transparent;box-shadow:0 5px 14px rgba(15,23,42,.14)}
-    .btn:active{transform:translateY(1px)}
-    .blue{background:var(--blue)} .green{background:var(--green)}
-    .small{color:var(--muted);font-size:14px}
-    .warning{background:var(--warn);border:1px solid var(--warn-border);border-radius:14px;padding:14px 15px;margin-top:16px;font-size:15px}
-    .after{display:none;background:var(--ok);border:1px solid #b9e2ca;border-radius:16px;padding:17px;margin-top:16px}
-    .after.show{display:block}
-    .after strong{font-size:18px}
-    .mini{background:var(--soft);border-radius:14px;padding:14px 15px;margin-top:14px}
-    .install-steps{margin:10px 0 0;padding-left:22px}
-    .install-steps li{margin:7px 0}
-    .help h2{font-size:21px}
-    .footer{text-align:center;color:#687386;font-size:12px;padding:8px 8px 0}
-    .file{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;word-break:break-all;font-size:13px}
-    @media (max-width:480px){.card{padding:18px;border-radius:17px}.btn{font-size:18px;padding:17px 12px}.subtitle{font-size:17px}}
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    .wrap {
+      width: min(760px, 100%);
+      margin: 0 auto;
+      padding: 22px 16px 48px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 18px 4px 8px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e8eef8;
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(29px, 7vw, 42px);
+      line-height: 1.08;
+      margin: 0 0 12px;
+      letter-spacing: -.02em;
+    }
+
+    .subtitle {
+      margin: 0 auto;
+      max-width: 640px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+      margin: 18px 0;
+      box-shadow: 0 8px 28px rgba(15, 23, 42, .06);
+    }
+
+    .step {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    h2 {
+      font-size: 24px;
+      line-height: 1.2;
+      margin: 0 0 8px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      border: 0;
+      border-radius: 14px;
+      padding: 18px 16px;
+      margin-top: 16px;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 1.15;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      box-shadow: 0 5px 14px rgba(15, 23, 42, .14);
+    }
+
+    .btn:active {
+      transform: translateY(1px);
+    }
+
+    .blue {
+      background: var(--blue);
+    }
+
+    .green {
+      background: var(--green);
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .warning {
+      background: var(--warn);
+      border: 1px solid var(--warn-border);
+      border-radius: 14px;
+      padding: 14px 15px;
+      margin-top: 16px;
+      font-size: 15px;
+    }
+
+    .after {
+      display: none;
+      background: var(--ok);
+      border: 1px solid #b9e2ca;
+      border-radius: 16px;
+      padding: 17px;
+      margin-top: 16px;
+    }
+
+    .after.show {
+      display: block;
+    }
+
+    .after strong {
+      font-size: 18px;
+    }
+
+    .mini {
+      background: var(--soft);
+      border-radius: 14px;
+      padding: 14px 15px;
+      margin-top: 14px;
+    }
+
+    .install-steps {
+      margin: 10px 0 0;
+      padding-left: 22px;
+    }
+
+    .install-steps li {
+      margin: 7px 0;
+    }
+
+    .help h2 {
+      font-size: 21px;
+    }
+
+    .file {
+      font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+      word-break: break-all;
+      font-size: 13px;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 18px;
+        border-radius: 17px;
+      }
+
+      .btn {
+        font-size: 18px;
+        padding: 17px 12px;
+      }
+
+      .subtitle {
+        font-size: 17px;
+      }
+    }
   </style>
 </head>
+
 <body>
+
   <main class="wrap">
+
     <section class="hero">
       <div class="badge">ANDROID TABLET</div>
-      <h1>LEGO Education<br>WeDo 2.0 Setup</h1>
-      
+
+      <h1>
+        LEGO Education<br>
+        WeDo 2.0 Setup
+      </h1>
     </section>
 
+
     <section class="card">
+
       <div class="step">Step 1</div>
+
       <h2>Install APK Installer</h2>
-      <p>Tap the button below and install <strong>APK Installer by Braveheart</strong> from Google Play.</p>
-      <a class="btn blue"
-         href="https://play.google.com/store/apps/details?id=braveheart.apps.apkinstaller"
-         target="_blank" rel="noopener">
+
+      <p>
+        Tap the button below and install
+        <strong>APK Installer by Braveheart</strong>
+        from Google Play.
+      </p>
+
+      <a
+        class="btn blue"
+        href="https://play.google.com/store/apps/details?id=braveheart.apps.apkinstaller"
+        target="_blank"
+        rel="noopener"
+      >
         1 · INSTALL APK INSTALLER
       </a>
-      <p class="small">Already installed? You can go straight to Step 2.</p>
+
+      <p class="small">
+        Already installed? You can go straight to Step 2.
+      </p>
+
     </section>
 
+
     <section class="card">
+
       <div class="step">Step 2</div>
+
       <h2>Download WeDo 2.0</h2>
-      <p>Tap once. The WeDo 2.0 <strong>.apks</strong> package will download into the tablet's normal <strong>Downloads</strong> folder.</p>
-      <a id="downloadBtn"
-         class="btn green"
-         href="https://github.com/eyadnasrr/wedo2.0-andriod-recovery/releases/download/v1.0/WeDo.2.0v1.10.259.apks">
+
+      <p>
+        Tap once. The WeDo 2.0
+        <strong>.apks</strong>
+        package will download into the tablet's normal
+        <strong>Downloads</strong>
+        folder.
+      </p>
+
+      <a
+        id="downloadBtn"
+        class="btn green"
+        href="https://github.com/eyadnasrr/wedo2.0-andriod-recovery/releases/download/v1.0/WeDo.2.0v1.10.259.apks"
+      >
         2 · DOWNLOAD WeDo 2.0
       </a>
 
+
       <div class="warning">
-        <strong>Important:</strong> Do not rename, unzip, convert, or modify the downloaded <strong>.apks</strong> file.
+        <strong>Important:</strong>
+        Do not rename, unzip, convert, or modify the downloaded
+        <strong>.apks</strong> file.
       </div>
 
-      <div id="afterDownload" class="after" aria-live="polite">
+
+      <div
+        id="afterDownload"
+        class="after"
+        aria-live="polite"
+      >
+
         <strong>Download started ✓</strong>
-        <p>When it finishes, open <strong>APK Installer by Braveheart</strong>. It should detect the WeDo file in <strong>Downloads</strong>.</p>
+
+        <p>
+          When it finishes, open
+          <strong>APK Installer by Braveheart</strong>.
+          It should detect the WeDo file in
+          <strong>Downloads</strong>.
+        </p>
+
+
         <div class="mini">
+
           <strong>Inside APK Installer:</strong>
+
           <ol class="install-steps">
-            <li>Select <span class="file">WeDo.2.0v1.10.259.apks</span>.</li>
-            <li>Tap <strong>Install</strong>.</li>
-            <li>If Android asks for permission to install from this source, follow the Android permission screen and continue.</li>
+
+            <li>
+              Select
+              <span class="file">
+                WeDo.2.0v1.10.259.apks
+              </span>.
+            </li>
+
+            <li>
+              Tap <strong>Install</strong>.
+            </li>
+
+            <li>
+              If Android asks for permission to install from this source,
+              follow the Android permission screen and continue.
+            </li>
+
           </ol>
+
         </div>
+
       </div>
+
     </section>
+
 
     <section class="card help">
+
       <h2>SmartHub not connecting?</h2>
-      <p>Go to <strong>Settings → Apps → WeDo 2.0 → Permissions</strong>. Allow the permissions available on the tablet, especially <strong>Nearby devices</strong> and <strong>Location</strong>. Make sure Bluetooth and Location are on, then reopen WeDo.</p>
+
+      <p>
+        Go to
+        <strong>Settings → Apps → WeDo 2.0 → Permissions</strong>.
+        Allow the permissions available on the tablet, especially
+        <strong>Nearby devices</strong>
+        and
+        <strong>Location</strong>.
+        Make sure Bluetooth and Location are on, then reopen WeDo.
+      </p>
+
     </section>
 
-    <div class="footer">
-      Independent recovery guide. LEGO, LEGO Education and WeDo are trademarks of the LEGO Group.
-      This page is not affiliated with, sponsored by, or endorsed by the LEGO Group.
-    </div>
   </main>
+
 
   <script>
     const downloadBtn = document.getElementById('downloadBtn');
     const afterDownload = document.getElementById('afterDownload');
+
     downloadBtn.addEventListener('click', function () {
       setTimeout(function () {
         afterDownload.classList.add('show');
-        afterDownload.scrollIntoView({behavior:'smooth', block:'center'});
+
+        afterDownload.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
       }, 700);
     });
   </script>
+
 </body>
 </html>
